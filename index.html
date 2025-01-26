@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="calculator">
+      <input id="display" readonly placeholder="Enter">
+      <div class="keys">
+        <button onclick="addToDisplay('+')" class="operator">+</button>
+        <button onclick="addToDisplay('7')">7</button>
+        <button onclick="addToDisplay('8')">8</button>
+        <button onclick="addToDisplay('9')">9</button>
+        <button onclick="addToDisplay('-')" class="operator">-</button>
+        <button onclick="addToDisplay('4')">4</button>
+        <button onclick="addToDisplay('5')">5</button>
+        <button onclick="addToDisplay('6')">6</button>
+        <button onclick="addToDisplay('*')" class="operator">*</button>
+        <button onclick="addToDisplay('1')">1</button>
+        <button onclick="addToDisplay('2')">2</button>
+        <button onclick="addToDisplay('3')">3</button>
+        <button onclick="addToDisplay('/')" class="operator">/</button>
+        <button onclick="addToDisplay('0')">0</button>
+        <button onclick="addToDisplay('.')">.</button>
+        <button onclick="calculate()" class="equal-button">=</button>
+        <button onclick="allClear()" class="clear-button">C</button>
+        <button onclick="deleteOne()" class="delete-button">DEL</button>
+        <button class="color-button" onclick="toggleBodyColor()">🎨</button>
+      </div>
+    </div>
+
+    <div id="popup" class="popup hidden">
+      <div class="popup-content">
+        <h3>SELECT GRADIENT COLORS</h3>
+        <input type="color" id="color1" value="#d56f6f">
+        <input type="color" id="color2" value="#764646">
+        <button onclick="applyGradient()" title="Apply">&#10003;</button>
+      <button onclick="closePopup()" title="Close">X</button>
+
+      </div>
+    </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
